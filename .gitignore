@@ -1,0 +1,13 @@
+*~
+*.bak
+*.cat
+*.dat
+*.db
+*.dir
+*.log
+*.orig
+*.scale
+*.search
+*.state
+*.txt
+.zcompdump
