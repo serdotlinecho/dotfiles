@@ -1,0 +1,21 @@
+! ---------------------------------------------------
+! file:     ~/.Xresources
+! vim: syntax=xdefaults
+! ---------------------------------------------------
+
+Xcursor.theme: Adwaita
+
+! Rofi
+rofi.font: Inconsolatazi4 11
+rofi.bg: #18191B
+rofi.fg: #ffffff
+rofi.bordercolor: #1590D7
+rofi.terminal: termite
+
+! Xautolock
+Xautolock.time: 10
+Xautolock.locker: i3lock -c 282828
+Xautolock.corners: -+00
+Xautolock.cornerdelay: 10
+
+

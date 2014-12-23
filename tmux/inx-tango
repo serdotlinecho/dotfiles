@@ -1,0 +1,37 @@
+# Tmux tango statusline in X session
+# vim: ft=tmux:
+
+set-option -g status-position bottom
+set-option -g status-fg white
+set-option -g status-bg colour0
+set -g status-justify centre
+set -g status-left-length 60
+
+RSEP=
+LSEP=
+SUBLSEP=
+SUBRSEP=
+set-option -g status-left "#[fg=white]Session:#[fg=blue,bold] #S #[fg=yellow]#I:#P"
+set-option -g status-right "#[fg=white]%a %d, %I:%M %p"
+
+# tab styles
+#set-window-option -g window-status-fg black
+#set-window-option -g window-status-bg default
+set-window-option -g window-status-format "#[fg=white]#I #[fg=white]#W#F"
+
+# current tab styles
+#set-window-option -g window-status-current-fg colour2
+#set-window-option -g window-status-current-bg colour0
+set-window-option -g window-status-current-format "#[bg=magenta,fg=white,bold]#I #[fg=white,bold]#W#[fg=white]#F "
+
+# activity tab styles
+set-window-option -g window-status-activity-fg white
+set-window-option -g window-status-activity-bg red
+set-window-option -g window-status-activity-attr none
+
+# refresh the status bar(default 15)
+set-option -g status-interval 30
+
+# time messages remain in the status bar.
+set-option -g display-time 1000
+

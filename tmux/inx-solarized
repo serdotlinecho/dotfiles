@@ -1,0 +1,37 @@
+# Tmux solarized statusline in X session
+# vim: ft=tmux:
+
+set-option -g status-position bottom
+set-option -g status-fg white
+set-option -g status-bg colour0
+set -g status-justify left
+set -g status-left-length 60
+
+RSEP=
+LSEP=
+SUBLSEP=
+SUBRSEP=
+set-option -g status-left ""
+set-option -g status-right "#[fg=colour12]$SUBLSEP#[fg=colour12] #I:#P #[fg=colour4]$LSEP#[bg=colour4,fg=colour7,bold] #S "
+
+# tab styles
+set-window-option -g window-status-fg colour14
+set-window-option -g window-status-bg colour0
+set-window-option -g window-status-format "#[fg=colour14]#I#[fg=colour10] #[fg=colour14]$SUBRSEP #[fg=default]#W#[fg=colour7]#F"
+
+# current tab styles
+set-window-option -g window-status-current-fg colour2
+set-window-option -g window-status-current-bg colour0
+set-window-option -g window-status-current-format "#[bg=colour5,fg=colour0]$RSEP #[bg=colour5,fg=colour7]#I #[fg=colour=7]$SUBRSEP #[fg=colour7,bold]#W#[fg=colour7]#F #[bg=colour0,fg=colour5]$RSEP"
+
+# activity tab styles
+set-window-option -g window-status-activity-fg colour15
+set-window-option -g window-status-activity-bg colour1
+set-window-option -g window-status-activity-attr none
+
+# refresh the status bar(default 15)
+set-option -g status-interval 30
+
+# time messages remain in the status bar.
+set-option -g display-time 1000
+
